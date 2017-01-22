@@ -42,11 +42,11 @@
 						<td><p>${customer.address}</p></td>
 						<td><p>${customer.dateOfBirth}</p></td>
 						
-						<td><p>${customer.sex}</p></td>
+						<td><p>${customer.sex}</p></td> 
 						
-						<td><a href="edit/"
+						<td><a href="edit/${customer.userName}"
 							class="btn btn-warning ">Edit</a>
-							<a href="delete/"
+							<a href="deleteUser/${customer.userName}"
 							class="btn btn-danger ">Delete</a>
 					</div>
 				</tr>

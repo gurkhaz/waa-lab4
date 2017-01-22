@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.lab.waa.model.Customer;
+import com.lab.waa.model.Product;
 
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepository{
@@ -28,5 +29,22 @@ public class CustomerRepositoryImpl implements CustomerRepository{
 	public Object getAllCustomers() {
 		return listOfCustomer;
 	}
+
+	@Override
+	public void deleteCustomerByName(String userName) {
+		int index = -1 ;
+		for (Customer customer : listOfCustomer) {
+			if (customer.getUserName().equals(userName.trim())) {
+				 index = listOfCustomer.indexOf(customer);
+				//listOfCustomer.remove(customer);
+			}
+		}
+		if(index != -1){}
+		listOfCustomer.remove(index);
+		
+	}
+	
+	
+
 
 }

@@ -7,6 +7,7 @@ public interface CustomerService {
 
 	public boolean addCustomer(Customer customer);
 	public Object getAllCustomers();
+	public void deleteCustomerByName(String userName);
 
 	
 }

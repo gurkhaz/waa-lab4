@@ -20,6 +20,7 @@
 
 		<header> </header>
 		<!-- <h3>Add Product</h3> -->
+		<a href="customer" class="btn btn-success">Add Customer</a><br/><br/>
 		<form:form modelAttribute="product" method="post" action="product">
 
 

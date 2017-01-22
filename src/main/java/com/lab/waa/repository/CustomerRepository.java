@@ -8,4 +8,6 @@ public interface CustomerRepository {
 
 	public Object getAllCustomers();
 
+	public void deleteCustomerByName(String userName);
+
 }
