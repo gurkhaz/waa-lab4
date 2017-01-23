@@ -44,7 +44,7 @@
 						
 						<td><p>${customer.sex}</p></td> 
 						
-						<td><a href="edit/${customer.userName}"
+						<td><a href="editUser/${customer.userName}"
 							class="btn btn-warning ">Edit</a>
 							<a href="deleteUser/${customer.userName}"
 							class="btn btn-danger ">Delete</a>

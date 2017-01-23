@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.lab.waa.model.Customer;
+import com.lab.waa.model.Product;
 import com.lab.waa.service.CustomerService;
 
 @Controller
@@ -66,6 +67,33 @@ public class CustomerController {
 		customerService.deleteCustomerByName(userName);
 		
 		return "redirect:/customerList";
+		
+		
+	}
+	
+	
+	@RequestMapping(value = "/editUser/{userName}")
+	public String editCustomerByName(@PathVariable String userName, Model model){
+		
+		
+		model.addAttribute("customer", customerService.editCustomerByName(userName));
+		
+		return "edit_customer";
+		
+	}
+	
+	
+	
+	@RequestMapping(value = "/editUser/{userName}", method = RequestMethod.POST)
+	public String updateCustomerByName(@ModelAttribute("customer")  @Valid Customer customer, BindingResult result){
+		
+		System.out.println("correct");
+		
+		if(customerService.updateCustomerByName(customer)){
+			return "redirect:/customerList";
+		}
+		return "edit_customer";
+		
 		
 		
 	}

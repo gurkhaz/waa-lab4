@@ -30,4 +30,19 @@ public class CustomerServiceImpl implements CustomerService {
 		customerRepository.deleteCustomerByName(userName);
 	}
 
+	@Override
+	public Object editCustomerByName(String userName) {
+		
+		return customerRepository.editCustomerByName(userName);
+	}
+
+	@Override
+	public boolean updateCustomerByName(Customer customer) {
+		
+		return customerRepository.updateCustomerByName(customer);
+	}
+
+	
+
+
 }

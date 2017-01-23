@@ -10,4 +10,8 @@ public interface CustomerRepository {
 
 	public void deleteCustomerByName(String userName);
 
+	public Object editCustomerByName(String userName);
+
+	public boolean updateCustomerByName(Customer customer);
+
 }
